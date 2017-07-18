@@ -3,7 +3,7 @@ This is an Elasticsearch Docker image used to launch a Elasticsearch service on 
 
 ```yaml
 data.elasticsearch:
-  image: nanobox/elasticsearch
+  image: nanobox/elasticsearch:5
 ```
 
 ## Elasticsearch Configuration Options
@@ -16,14 +16,13 @@ Elasticsearch components are configured in your `boxfile.yml`. All available con
 #### Overview of Elasticsearch Boxfile Settings
 ```yaml
 data.elasticsearch:
-  image: nanobox/elasticsearch
+  image: nanobox/elasticsearch:5
   config:
-    version: 5
     cluster_name: cluster1
 ```
 
 ### Version
-When configuring a Elasticsearch component in your Boxfile, you can specify which version to use. The following version(s) are available:
+When configuring a Elasticsearch component in your `boxfile.yml`, you can specify which version to use by appedending it to your `image`. The following version(s) are available:
 
 - 5
 
@@ -33,25 +32,23 @@ When configuring a Elasticsearch component in your Boxfile, you can specify whic
 ```yaml
 # default setting
 data.elasticsearch:
-  image: nanobox/elasticsearch
-  config:
-    version: 5
+  image: nanobox/elasticsearch:5
 ```
 
 ### Cluster Name
 This allows you to give a custom name to the Elasticsearch cluster
-By default it uses the name of the component
+By default it uses the name of the component.
 
 #### cluster\_name
 ```yaml
 data.elasticsearch:
-  image: nanobox/elasticsearch
+  image: nanobox/elasticsearch:5
   config:
     cluster_name: custom_name
 ```
 
 ## Help & Support
-This is a Elasticsearch Docker image provided by [Nanobox](http://nanobox.io). If you need help with this image, you can reach out to us in the [#nanobox IRC channel](http://webchat.freenode.net/?channels=nanobox). If you are running into an issue with the image, feel free to [create a new issue on this project](https://github.com/nanobox-io/nanobox-docker-elasticsearch/issues/new).
+This is a Elasticsearch Docker image provided by [Nanobox](http://nanobox.io). If you need help with this image, you can reach out to us in the [Nanobox Slack channel](http://nanoboxio.slack.com) (nanoboxio). If you are running into an issue with the image, feel free to [create a new issue on this project](https://github.com/nanobox-io/nanobox-docker-elasticsearch/issues/new).
 
 ## License
 
